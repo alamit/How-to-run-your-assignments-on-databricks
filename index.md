@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Step 1 : Create your cluster
 
-You can use the [editor on GitHub](https://github.com/alamit/databricks-coursera-scalaspark-tutorial/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+First of all, once you are logged into your databricks dashboard, you have to create a cluster for your spark program to run on. (Note that with the trial version your cluster will be deleted after 2 hours being idle, you will have to repeat this step quite often).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Create your cluster 1](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/create-cluster1.png)
 
-### Markdown
+Note that you don't have access to many configuration with the trial version, you will have to stick to default configs (1 master, no workers, 6GB of memory). You can add some Spark configuration options in the **Spark** tab.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Create your cluster 2](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/create-cluster3.png)
 
-```markdown
-Syntax highlighted code block
+Now that you created your cluster, you have to import the data you want to work with on it, so go back to your dashboard.
 
-# Header 1
-## Header 2
-### Header 3
+## Step 2 : Importing your data.
 
-- Bulleted
-- List
+You have to complete **Step 1** before uploading your data, you need an active cluster in order to import data on it.
 
-1. Numbered
-2. List
+Back to your dashboard, you will now use **Table** to add data to your cluster.
 
-**Bold** and _Italic_ and `Code` text
+![Import Data 1](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/import-data1.png)
 
-[Link](url) and ![Image](src)
-```
+Use **File** as Data Source type (if your Data Source is a File, later on we might some other types of data source). Then upload your file and you should see something like this.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![Import Data 2](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/import-data2.png)
 
-### Jekyll Themes
+Now that your data is imported, you want to run some Spark program on it ! So go back to your dashboard, it's time to create your first Notebook.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alamit/databricks-coursera-scalaspark-tutorial/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Step 3 : Create a Scala Notebook
 
-### Support or Contact
+Back on your dahsboard, let's now create a Scala Notebook. 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+![Create Notebook 1](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/create-notebook1.png)
+
+Be sure to use Scala as a language parameter, and choose the name of your notebook.
+
+![Create Notebook 2](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/create-notebook2.png)
+
+This will send you to your fresh notebook, don't forget to link your Notebook to your cluster.
+
+![Create Notebook 3](https://github.com/alamit/How-to-run-your-assignments-on-databricks/blob/master/create-notebook3.png)
+
+## Step 4 : Write your Spark program.
+
+
